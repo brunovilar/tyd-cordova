@@ -16,4 +16,7 @@
     <plugins>
         <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
     </plugins>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
 </widget>
