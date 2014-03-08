@@ -44,7 +44,10 @@ var System = {
   }
 };
 
-  Accelerometer : { // Based on: http://docs.phonegap.com/en/2.5.0/cordova_accelerometer_accelerometer.md.html#Accelerometer
+
+var Sensors = {
+
+  Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
     init : function () {      
       $("#pAxis").hide();      
       navigator.accelerometer.getCurrentAcceleration(getAcceleration, getAccelerationError);
