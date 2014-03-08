@@ -49,8 +49,8 @@ var Sensors = {
 
   Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
     init : function () {      
-      $("#pAxis").hide();      
-      navigator.accelerometer.getCurrentAcceleration(Sensors.Accelerometer.getAcceleration, Sensors.Accelerometer.getAccelerationError);
+      $("#pAxis").hide();
+      navigator.accelerometer.watchAcceleration(Sensors.Accelerometer.getAcceleration, Sensors.Accelerometer.getAccelerationError, { frequency: 1000 });
     },
 
     getAcceleration : function(acceleration){

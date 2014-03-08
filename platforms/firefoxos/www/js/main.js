@@ -1,5 +1,3 @@
-"use strict";
-
 var Screen = {
 
   Color : {
@@ -50,25 +48,22 @@ var System = {
 var Sensors = {
 
   Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
-    init : function () {
-      var pAxis = $("#pAxis").hide();
-      var uAxis = $("#ulAxis").hide();
-      if (window.DeviceMotionEvent) {
-        window.addEventListener('devicemotion', function (evt) {        
-          if (typeof(evt.accelerationIncludingGravity) != 'undefined') {
-            $("#spXAxis").html(evt.accelerationIncludingGravity.x);
-            $("#spYAxis").html(evt.accelerationIncludingGravity.y);
-            $("#spZAxis").html(evt.accelerationIncludingGravity.z);
-            pAxis.show();
-            ulAxis.show();
-          } else {
-            $("#pMessage").html("Não foi possível obter os valores do acelerômetro.");  
-          }           
-        }, true);     
-      } else {
-        $("#pMessage").html("Seu navegador não permite o recebimento dos valores do acelerômetro.");
-      }
-    }
+    init : function () {      
+      $("#pAxis").hide();      
+      navigator.accelerometer.getCurrentAcceleration(getAcceleration, getAccelerationError);
+    },
+
+    getAcceleration : function(acceleration){
+      $("#spXAxis").html(acceleration.x);
+      $("#spYAxis").html(acceleration.y);
+      $("#spZAxis").html(acceleration.z);
+      $("#pAxis").show();
+    },
+
+    getAccelerationError : function(){
+      $("#pMessage").html("Não foi possível obter os valores do acelerômetro.");  
+    }   
+
   },
   
   AmbientLight : { // Based on: https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events
