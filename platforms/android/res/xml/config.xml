@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.kraho.tyd" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="App">
+        <param name="android-package" value="org.apache.cordova.App" />
+    </feature>
+    <name>Test Your Device</name>
+    <description>
+        Versão do TYD distribuída pelo Apache Cordova
+    </description>
+    <author email="bruno@kraho.org" href="https://github.com/brunovilar">
+        Bruno Vilar
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <plugins>
+        <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
+    </plugins>
+</widget>

@@ -44,23 +44,31 @@ var System = {
   }
 };
 
-  Accelerometer : { // Based on: http://docs.phonegap.com/en/2.5.0/cordova_accelerometer_accelerometer.md.html#Accelerometer
-    init : function () {      
-      $("#pAxis").hide();      
-      navigator.accelerometer.getCurrentAcceleration(getAcceleration, getAccelerationError);
-    },
 
-    getAcceleration : function(acceleration){
-      $("#spXAxis").html(acceleration.x);
-      $("#spYAxis").html(acceleration.y);
-      $("#spZAxis").html(acceleration.z);
-      $("#pAxis").show();
-    },
+var Sensors = {
 
-    getAccelerationError : function(){
-      $("#pMessage").html("Não foi possível obter os valores do acelerômetro.");  
-    }   
-
+  Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
+    init : function () {
+      var pAxis = $("#pAxis");
+      pAxis.hide();
+      var uAxis = $("#ulAxis");
+      uAxis.hide();
+      if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', function (evt) {        
+          if (typeof(evt.accelerationIncludingGravity) != 'undefined') {
+            $("#spXAxis").html(evt.accelerationIncludingGravity.x);
+            $("#spYAxis").html(evt.accelerationIncludingGravity.y);
+            $("#spZAxis").html(evt.accelerationIncludingGravity.z);
+            pAxis.show();
+            ulAxis.show();
+          } else {
+            $("#pMessage").html("Não foi possível obter os valores do acelerômetro.");  
+          }
+        }, true);
+      } else {
+        $("#pMessage").html("Seu navegador não permite o recebimento dos valores do acelerômetro.");
+      }
+    }
   },
   
   AmbientLight : { // Based on: https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events

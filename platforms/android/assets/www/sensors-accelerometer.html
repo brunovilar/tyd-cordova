@@ -1,0 +1,21 @@
+<div data-role="page" id="pgAccelerometer">
+  <div data-role="header">
+	  <h1>Exibir dados do acelerômetro</h1>
+  </div>	
+  <div data-role="content">
+    <p id="pAxis">
+      Eixos:
+      <ul id="ulAxis">
+        <li><span id="spXAxis"></span></li>
+        <li><span id="spYAxis"></span></li>
+        <li><span id="spZAxis"></span></li>
+      </ul> 
+    </p>
+    <p id="pMessage"></p>    
+  </div>	
+  <div data-role="footer" data-position="fixed">
+	    <a href="" data-rel="back" data-icon="back">Retornar</a>	   
+  </div>
+  <!-- Based on: http://openlayers.org/dev/examples/game-accel-ball.html -->
+  <script>(Sensors.Accelerometer.init());</script>
+</div>

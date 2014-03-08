@@ -1,4 +1,4 @@
-tyd-cordova
+TYD-Cordova - Test Your Device - Cordova
 ===========
 
 Esta é a versão do Test Your Device (TYD) feita com o Apache Cordova. 

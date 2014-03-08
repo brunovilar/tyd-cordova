@@ -1,0 +1,18 @@
+<div data-role="page" id="pgProximity">
+  <div data-role="header">
+	  <h1>Exibir o nível de proximidade</h1>
+  </div>	
+  <div data-role="content">
+    <p>
+      Nível atual: <span id="spCurrentLevel"></span>
+    </p>
+    <p>
+      Níveis de referência: <span id="spReferenceLevels"></span>
+    </p>    
+  </div>	
+  <div data-role="footer" data-position="fixed">
+	    <a href="" data-rel="back" data-icon="back">Retornar</a>	   
+  </div>
+  <!-- Based on: https://developer.mozilla.org/en-US/docs/Web/API/DeviceProximityEvent -->
+  <script>(Sensors.Proximity.init());</script>
+</div>
