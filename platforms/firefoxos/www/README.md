@@ -1,7 +1,5 @@
-tyd-cordova
-===========
-
-Esta é a versão do Test Your Device (TYD) feita com o Apache Cordova. 
+TYD - Test Your Device
+===
 
 ### Objetivo do app
 
@@ -11,7 +9,7 @@ Esse conjunto de ferramentas é útil para conhecer os recursos de um aparelho, 
 
 ### Motivação pessoal
 
-A motivação por trás da criação deste app é o estudo e a consolidação de conceitos envolvendo desenvolvimento para a Web e para dispositivos móveis. Mais específicamente, procuro me familiarizar com HTML5, jQuery, jQuery Mobile e PhoneGap/Cordova. Portanto, em algum momento estes recursos estarão presentes neste projeto ou no [original](https://github.com/brunovilar/tyd).
+A motivação por trás da criação deste app é o estudo e a consolidação de conceitos envolvendo desenvolvimento para a Web e para dispositivos móveis. Mais específicamente, procuro me familiarizar com HTML5, jQuery, jQuery Mobile e PhoneGap/Cordova. Portanto, em algum momento estes recursos estarão presentes.
 
 
 ### Contribuições e críticas

@@ -1,0 +1,16 @@
+<div data-role="page" id="pgAmbientLight">
+  <div data-role="header">
+	  <h1>Exibir o nível de luminosidade do ambiente</h1>
+  </div>	
+  <div data-role="content">
+    <p>
+      Nível: <span id="spCurrentLevel"></span>
+    </p>
+  </div>	
+  <div data-role="footer" data-position="fixed">
+	    <a href="" data-rel="back" data-icon="back">Retornar</a>
+	   
+  </div>
+  <!-- Based on: https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events -->
+  <script>(Sensors.AmbientLight.init());</script>
+</div>
