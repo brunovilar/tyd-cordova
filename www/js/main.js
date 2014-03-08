@@ -50,7 +50,7 @@ var Sensors = {
   Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
     init : function () {      
       $("#pAxis").hide();      
-      navigator.accelerometer.getCurrentAcceleration(getAcceleration, getAccelerationError);
+      navigator.accelerometer.getCurrentAcceleration(Sensors.Accelerometer.getAcceleration, Sensors.Accelerometer.getAccelerationError);
     },
 
     getAcceleration : function(acceleration){
