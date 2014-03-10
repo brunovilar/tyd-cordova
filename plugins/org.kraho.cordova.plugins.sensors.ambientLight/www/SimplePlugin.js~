@@ -1,0 +1,30 @@
+
+
+var SimplePlugin = {
+
+    doFirstAction : function(successCallback, errorCallback){
+        cordova.exec(
+            successCallback,
+            errorCallback, 
+            'SimplePlugin', 
+            'first',
+            []
+        );
+    },
+
+    doSecondAction : function(x, y, successCallback, errorCallback){
+        cordova.exec(
+            successCallback,
+            errorCallback, 
+            'SimplePlugin', 
+            'second',
+              [{                  // and this array of custom arguments to create our entry
+                "x": x,
+                "y": y                
+            }]
+        );        
+
+    }
+};
+
+module.exports = SimplePlugin;

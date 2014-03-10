@@ -12,5 +12,7 @@
 	   
   </div>
   <!-- Based on: https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events -->
-  <script>(Sensors.AmbientLight.init());</script>
+  <script>
+    document.addEventListener("deviceready",Sensors.AmbientLight.init,false);   
+  </script>
 </div>

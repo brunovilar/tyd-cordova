@@ -29,7 +29,10 @@
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/js/jquery.mobile-1.4.1.min.js \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/js/jquery-2.1.0.min.js \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/js/main.js \
+/home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.kraho.cordova.plugins.sensors.ambientLight \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device-motion \
+/home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.kraho.cordova.plugins.sensors.ambientLight/www \
+/home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.kraho.cordova.plugins.sensors.ambientLight/www/AmbientLightPlugin.js \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www/accelerometer.js \
 /home/bruno/code/tyd-cordova/platforms/android/assets/www/plugins/org.apache.cordova.device-motion/www/Acceleration.js \

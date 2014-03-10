@@ -49,8 +49,8 @@ var Sensors = {
 
   Accelerometer : { // Based on: http://openlayers.org/dev/examples/game-accel-ball.html
     init : function () {      
-      $("#pAxis").hide();      
-      navigator.accelerometer.getCurrentAcceleration(Sensors.Accelerometer.getAcceleration, Sensors.Accelerometer.getAccelerationError);
+      $("#pAxis").hide();
+      navigator.accelerometer.watchAcceleration(Sensors.Accelerometer.getAcceleration, Sensors.Accelerometer.getAccelerationError, { frequency: 1000 });
     },
 
     getAcceleration : function(acceleration){
@@ -68,15 +68,23 @@ var Sensors = {
   
   AmbientLight : { // Based on: https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events
     init : function () {     
-      var spCurrentLevel = $("#spCurrentLevel");
-      window.addEventListener('devicelight', function(event) {
+      /*window.addEventListener('devicelight', function(event) {
         spCurrentLevel.html(event.value);
-      });      
+      });      */
+      AmbientLightPlugin.doSecondAction(3, 4, Sensors.AmbientLight.getAmbientLighValue, Sensors.AmbientLight.getAmbientLighError);      
+    },
+
+    getAmbientLighValue : function(value){
+      $("#spCurrentLevel").html('Value: ' + value);
+    },
+
+    getAmbientLighError : function(error){
+      $("#spCurrentLevel").html('Error: ' + error);
     }
   },
   
   Proximity : { // Based on: https://developer.mozilla.org/en-US/docs/Web/API/DeviceProximityEvent 
-    init : function () {     
+    init : function () {
       var spCurrentLevel = $("#spCurrentLevel");
       var spReferenceLevels = $("#spReferenceLevels");
       window.addEventListener('deviceproximity', function(event) {

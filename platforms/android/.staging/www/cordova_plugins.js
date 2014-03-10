@@ -13,12 +13,20 @@ module.exports = [
         "clobbers": [
             "navigator.accelerometer"
         ]
+    },
+    {
+        "file": "plugins/org.kraho.cordova.plugins.sensors.ambientLight/www/AmbientLightPlugin.js",
+        "id": "org.kraho.cordova.plugins.sensors.ambientLight.AmbientLightPlugin",
+        "clobbers": [
+            "window.AmbientLightPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.device-motion": "0.2.6"
+    "org.apache.cordova.device-motion": "0.2.6",
+    "org.kraho.cordova.plugins.sensors.ambientLight": "0.1"
 }
 // BOTTOM OF METADATA
 });

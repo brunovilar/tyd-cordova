@@ -7,6 +7,9 @@
     <feature name="Accelerometer">
         <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
     </feature>
+    <feature name="AmbientLightPlugin">
+        <param name="android-package" value="org.kraho.cordova.plugins.sensors.AmbientLightPlugin" />
+    </feature>
     <name>Test Your Device</name>
     <description>
         Versão do TYD distribuída pelo Apache Cordova

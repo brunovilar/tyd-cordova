@@ -1,4 +1,7 @@
 /home/bruno/code/tyd-cordova/platforms/android/ant-build/classes.dex : \
+/home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/cordova/plugins/SimplePlugin.class \
+/home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/cordova/plugins/sensors/AmbientLightPlugin.class \
+/home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/cordova/plugins/AmbientLightPlugin.class \
 /home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/tyd/R$xml.class \
 /home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/tyd/TestYourDevice.class \
 /home/bruno/code/tyd-cordova/platforms/android/ant-build/classes/org/kraho/tyd/BuildConfig.class \
