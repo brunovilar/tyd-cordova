@@ -2,26 +2,35 @@ cordova.define("org.kraho.cordova.plugins.sensors.ambientLight.AmbientLightPlugi
 
 var AmbientLightPlugin = {
 
-    doFirstAction : function(successCallback, errorCallback){
+     getValue : function(successCallback, errorCallback){
+        AmbientLightPlugin.start();
         cordova.exec(
             successCallback,
             errorCallback, 
             'AmbientLightPlugin', 
-            'first',
+            'SENSOR_VALUE',
+            []
+        );
+       // AmbientLightPlugin.stop();
+    },  
+    
+    start : function(){
+        cordova.exec(
+            null,
+            null, 
+            'AmbientLightPlugin', 
+            'START',
             []
         );
     },
 
-    doSecondAction : function(x, y, successCallback, errorCallback){
+    stop : function(){
         cordova.exec(
-            successCallback,
-            errorCallback, 
+            null,
+            null, 
             'AmbientLightPlugin', 
-            'second',
-            [{ 
-                "x": x,
-                "y": y                
-            }]
+            'STOP',
+            []
         );        
 
     }

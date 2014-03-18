@@ -71,7 +71,8 @@ var Sensors = {
       /*window.addEventListener('devicelight', function(event) {
         spCurrentLevel.html(event.value);
       });      */
-      AmbientLightPlugin.doSecondAction(3, 4, Sensors.AmbientLight.getAmbientLighValue, Sensors.AmbientLight.getAmbientLighError);      
+      AmbientLightPlugin.start();
+      setInterval(AmbientLightPlugin.getValue(Sensors.AmbientLight.getAmbientLighValue, Sensors.AmbientLight.getAmbientLighError), 1000);
     },
 
     getAmbientLighValue : function(value){

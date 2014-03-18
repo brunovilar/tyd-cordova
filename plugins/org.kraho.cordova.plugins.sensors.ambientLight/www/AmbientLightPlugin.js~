@@ -2,29 +2,36 @@
 
 var AmbientLightPlugin = {
 
-    doFirstAction : function(successCallback, errorCallback){
+     getValue : function(successCallback, errorCallback){
         cordova.exec(
             successCallback,
             errorCallback, 
             'AmbientLightPlugin', 
-            'first',
+            'SENSOR_VALUE',
+            []
+        );
+    },  
+    
+    start : function(){
+        cordova.exec(
+            null,
+            null, 
+            'AmbientLightPlugin', 
+            'START',
             []
         );
     },
 
-    doSecondAction : function(x, y, successCallback, errorCallback){
+    stop : function(){
         cordova.exec(
-            successCallback,
-            errorCallback, 
+            null,
+            null, 
             'AmbientLightPlugin', 
-            'second',
-            [{ 
-                "x": x,
-                "y": y                
-            }]
+            'STOP',
+            []
         );        
 
     }
 };
 
-module.exports = AmbientLight;
+module.exports = AmbientLightPlugin;
